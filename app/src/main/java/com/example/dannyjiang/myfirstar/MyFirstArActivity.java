@@ -10,7 +10,6 @@ import android.widget.Toast;
 
 import com.example.dannyjiang.myfirstar.rendering.BackgroundRenderer;
 import com.example.dannyjiang.myfirstar.utils.CameraPermissionHelper;
-import com.example.dannyjiang.myfirstar.utils.TapHelper;
 import com.google.ar.core.ArCoreApk;
 import com.google.ar.core.Frame;
 import com.google.ar.core.Session;
@@ -176,6 +175,8 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
         }
 
         try {
+            // 将在'createOnGlThread'方法中已经初始化好的Texture Handle(句柄)传给AR Session
+            // 如果没有设置此句柄，则会显示黑屏。
             session.setCameraTextureName(backgroundRenderer.getTextureId());
 
             // 通过AR Session获取当前手机摄像头(Camera)的当前帧(Frame)。
