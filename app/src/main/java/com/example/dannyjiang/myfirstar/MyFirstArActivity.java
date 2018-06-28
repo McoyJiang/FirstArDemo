@@ -32,7 +32,6 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
 
     // Surface View
     private GLSurfaceView surfaceView;
-    private TapHelper tapHelper;
 
     // AR world
     private Session session;
@@ -48,8 +47,6 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
 
         // 初始化GLSurfaceView，并跟TapHelper绑定
         surfaceView = findViewById(R.id.glSurfaceView);
-        tapHelper = new TapHelper(/*context=*/ this);
-        surfaceView.setOnTouchListener(tapHelper);
 
         // 配置GLSurfaceView基本属性, 并设置renderer.
         surfaceView.setPreserveEGLContextOnPause(true);
