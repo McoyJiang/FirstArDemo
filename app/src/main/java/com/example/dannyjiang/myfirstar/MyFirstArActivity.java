@@ -82,8 +82,6 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
         super.onResume();
 
         if (session == null) {
-            Exception exception = null;
-            String message = null;
             try {
                 switch (ArCoreApk.getInstance().requestInstall(this, !installRequested)) {
                     case INSTALL_REQUESTED:
@@ -190,33 +188,37 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
             // 通过当前帧Frame对象，可以获取ARCore所捕捉到的Camera对象
             Camera camera = frame.getCamera();
 
-            // 使用TapHelper从队列中获取一次点击事件
+            /**
+             * 使用TapHelper从队列中获取一次点击事件，并根据此点击事件的坐标创建一个Anchor
+             * Anchor可以自行记录它在AR世界中的位置，后续绘制Virtual Object时就可以
+             * 根据此Anchor来确定Virtual Object的位置，
+             * 具体API为：anchor.getPose().toMatrix(anchorMatrix, 0); 通过这一行代码
+             * 就可以将Anchor所对应的位置保存在anchorMatrix数组中
+             */
             MotionEvent tap = tapHelper.poll();
             if (tap != null && camera.getTrackingState() == TrackingState.TRACKING) {
                 for (HitResult hit : frame.hitTest(tap)) {
                     // Check if any plane was hit, and if it was hit inside the plane polygon
-//                    Trackable trackable = hit.getTrackable();
+                    Trackable trackable = hit.getTrackable();
                     // Creates an anchor if a plane or an oriented point was hit.
-//                    if ((trackable instanceof Plane
-//                            && ((Plane) trackable).isPoseInPolygon(hit.getHitPose())
-//                            && (PlaneRenderer.calculateDistanceToPlane(hit.getHitPose(), camera.getPose())
-//                            > 0))
-//                            || (trackable instanceof Point
-//                            && ((Point) trackable).getOrientationMode()
-//                            == Point.OrientationMode.ESTIMATED_SURFACE_NORMAL)) {
-                        // Hits are sorted by depth. Consider only closest hit on a plane or oriented point.
-                        // Cap the number of objects created. This avoids overloading both the
-                        // rendering system and ARCore.
+                    if ((trackable instanceof Plane
+                            && ((Plane) trackable).isPoseInPolygon(hit.getHitPose())
+                            && (PlaneRenderer.calculateDistanceToPlane(hit.getHitPose(), camera.getPose())
+                            > 0))
+                            || (trackable instanceof Point
+                            && ((Point) trackable).getOrientationMode()
+                            == Point.OrientationMode.ESTIMATED_SURFACE_NORMAL)) {
+                        // 如果队列的长度已经等于20，则将第一个Anchor给detach掉, 并从队里中移除
                         if (anchors.size() >= 20) {
                             anchors.get(0).detach();
                             anchors.remove(0);
                         }
-                        // Adding an Anchor tells ARCore that it should track this position in
-                        // space. This anchor is created on the Plane to place the 3D model
-                        // in the correct position relative both to the world and to the plane.
+                        // 使用HitResult创建出一个Anchor对象，并添加到队列中
+                        // 因为HitResult是由点击事件MotionEvent而创建出的
+                        // 所以此Anchor会记录它所在AR World中的具体位置
                         anchors.add(hit.createAnchor());
                         break;
-//                    }
+                    }
                 }
             }
 
@@ -237,8 +239,8 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
             camera.getViewMatrix(viewmtx, 0);
 
             // 绘制ARCore识别出的Planes.
-//            planeRenderer.drawPlanes(
-//                    session.getAllTrackables(Plane.class), camera.getDisplayOrientedPose(), projmtx);
+            planeRenderer.drawPlanes(
+                    session.getAllTrackables(Plane.class), camera.getDisplayOrientedPose(), projmtx);
 
             // Compute lighting from average intensity of the image.
             // The first three components are color scaling factors.

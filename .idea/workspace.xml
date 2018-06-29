@@ -10,7 +10,6 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/MyFirstArActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/MyFirstArActivity.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +36,8 @@
       <file leaf-file-name="MyFirstArActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/MyFirstArActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="877">
-              <caret line="239" column="39" lean-forward="false" selection-start-line="239" selection-start-column="39" selection-end-line="240" selection-end-column="40" />
+            <state relative-caret-position="265">
+              <caret line="229" column="68" lean-forward="true" selection-start-line="229" selection-start-column="68" selection-end-line="229" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -2698,85 +2697,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/MyFirstArActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/rendering/BackgroundRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2574">
-          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
-          <folding>
-            <element signature="e#1878#1879#0" expanded="true" />
-            <element signature="e#1904#1905#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/rendering/PlaneRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="48" column="63" lean-forward="true" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/utils/DisplayRotationHelper.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/utils/CameraPermissionHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/utils/TapHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/MyFirstArActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/utils/DisplayRotationHelper.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/utils/CameraPermissionHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/utils/TapHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/ab578e0a0d31fb5a30607f22ff816976/jars/classes.jar!/com/google/ar/core/Frame.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="52" column="16" lean-forward="false" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/ab578e0a0d31fb5a30607f22ff816976/jars/classes.jar!/com/google/ar/core/Session.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -2962,8 +2882,308 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/MyFirstArActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="877">
-          <caret line="239" column="39" lean-forward="false" selection-start-line="239" selection-start-column="39" selection-end-line="240" selection-end-column="40" />
+        <state relative-caret-position="418">
+          <caret line="198" column="52" lean-forward="true" selection-start-line="198" selection-start-column="52" selection-end-line="198" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/MyFirstArActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/rendering/BackgroundRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2574">
+          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+          <folding>
+            <element signature="e#1878#1879#0" expanded="true" />
+            <element signature="e#1904#1905#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/rendering/PlaneRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="48" column="63" lean-forward="true" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/utils/DisplayRotationHelper.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/utils/CameraPermissionHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/utils/TapHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/MyFirstArActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/utils/DisplayRotationHelper.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/utils/CameraPermissionHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/utils/TapHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/ab578e0a0d31fb5a30607f22ff816976/jars/classes.jar!/com/google/ar/core/Frame.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="52" column="16" lean-forward="false" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/ab578e0a0d31fb5a30607f22ff816976/jars/classes.jar!/com/google/ar/core/Session.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="136" column="16" lean-forward="false" selection-start-line="136" selection-start-column="16" selection-end-line="136" selection-end-column="16" />
+          <folding>
+            <marker date="1526969108000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1526969108000" expanded="false" signature="142:1819" ph="..." />
+            <marker date="1526969108000" expanded="true" signature="4090:4299" ph="{...}" />
+            <marker date="1526969108000" expanded="false" signature="4323:4334" ph=" { " />
+            <marker date="1526969108000" expanded="false" signature="4359:4365" ph=" }" />
+            <marker date="1526969108000" expanded="true" signature="4391:4459" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="4508:4644" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="4687:5115" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="5156:5231" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="5293:5346" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="5409:5641" ph="{...}" />
+            <marker date="1526969108000" expanded="false" signature="5666:5677" ph=" { " />
+            <marker date="1526969108000" expanded="false" signature="5713:5719" ph=" }" />
+            <marker date="1526969108000" expanded="true" signature="5768:5841" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="5908:5991" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="5997:6015" ph="/**...*/" />
+            <marker date="1526969108000" expanded="true" signature="6076:6160" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="6208:6318" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="6399:6722" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="6766:6882" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="6931:7063" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="7115:7237" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="7308:7622" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="7728:8155" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="8221:8538" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="8712:12150" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="12207:12350" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/MyFirstArActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="162" column="34" lean-forward="false" selection-start-line="162" selection-start-column="34" selection-end-line="162" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/rendering/BackgroundRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+          <folding>
+            <element signature="e#1878#1879#0" expanded="true" />
+            <element signature="e#1904#1905#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/utils/DisplayRotationHelper.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/utils/CameraPermissionHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/utils/TapHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/MyFirstArActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/utils/DisplayRotationHelper.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/utils/CameraPermissionHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/utils/TapHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/ab578e0a0d31fb5a30607f22ff816976/jars/classes.jar!/com/google/ar/core/Frame.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="52" column="16" lean-forward="false" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/rendering/BackgroundRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2574">
+          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+          <folding>
+            <element signature="e#1878#1879#0" expanded="true" />
+            <element signature="e#1904#1905#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/models/trigrid.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/models/andy.obj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/rendering/PlaneRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="301" column="57" lean-forward="false" selection-start-line="301" selection-start-column="57" selection-end-line="301" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="32" column="40" lean-forward="false" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/rendering/ObjectRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="279" column="34" lean-forward="false" selection-start-line="279" selection-start-column="34" selection-end-line="279" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/ab578e0a0d31fb5a30607f22ff816976/jars/classes.jar!/com/google/ar/core/Session.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="154" column="47" lean-forward="false" selection-start-line="154" selection-start-column="47" selection-end-line="154" selection-end-column="47" />
+          <folding>
+            <marker date="1526969108000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1526969108000" expanded="false" signature="142:1819" ph="..." />
+            <marker date="1526969108000" expanded="true" signature="4090:4299" ph="{...}" />
+            <marker date="1526969108000" expanded="false" signature="4323:4334" ph=" { " />
+            <marker date="1526969108000" expanded="false" signature="4359:4365" ph=" }" />
+            <marker date="1526969108000" expanded="true" signature="4391:4459" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="4508:4644" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="4687:5115" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="5156:5231" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="5293:5346" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="5409:5641" ph="{...}" />
+            <marker date="1526969108000" expanded="false" signature="5666:5677" ph=" { " />
+            <marker date="1526969108000" expanded="false" signature="5713:5719" ph=" }" />
+            <marker date="1526969108000" expanded="true" signature="5768:5841" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="5908:5991" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="5997:6015" ph="/**...*/" />
+            <marker date="1526969108000" expanded="true" signature="6076:6160" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="6208:6318" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="6399:6722" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="6766:6882" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="6931:7063" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="7115:7237" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="7308:7622" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="7728:8155" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="8221:8538" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="8712:12150" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="12207:12350" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/ab578e0a0d31fb5a30607f22ff816976/jars/classes.jar!/com/google/ar/core/HitResult.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="55" column="18" lean-forward="false" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+          <folding>
+            <marker date="1526969108000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1526969108000" expanded="true" signature="258:328" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="356:424" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="465:698" ph="{...}" />
+            <marker date="1526969108000" expanded="false" signature="725:736" ph=" { " />
+            <marker date="1526969108000" expanded="false" signature="786:792" ph=" }" />
+            <marker date="1526969108000" expanded="true" signature="841:979" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="1010:1098" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="1131:1223" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="1261:1414" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="1449:1594" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/MyFirstArActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="229" column="68" lean-forward="true" selection-start-line="229" selection-start-column="68" selection-end-line="229" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
