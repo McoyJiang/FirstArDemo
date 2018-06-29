@@ -5,21 +5,29 @@ import android.opengl.GLSurfaceView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.example.dannyjiang.myfirstar.rendering.BackgroundRenderer;
+import com.example.dannyjiang.myfirstar.rendering.ObjectRenderer;
 import com.example.dannyjiang.myfirstar.rendering.PlaneRenderer;
 import com.example.dannyjiang.myfirstar.utils.CameraPermissionHelper;
+import com.example.dannyjiang.myfirstar.utils.TapHelper;
+import com.google.ar.core.Anchor;
 import com.google.ar.core.ArCoreApk;
 import com.google.ar.core.Camera;
 import com.google.ar.core.Frame;
+import com.google.ar.core.HitResult;
 import com.google.ar.core.Plane;
+import com.google.ar.core.Point;
 import com.google.ar.core.Session;
+import com.google.ar.core.Trackable;
 import com.google.ar.core.TrackingState;
 import com.google.ar.core.exceptions.CameraNotAvailableException;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
@@ -30,11 +38,17 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
 
     // Surface View
     private GLSurfaceView surfaceView;
+    private TapHelper tapHelper;
 
     // AR world
     private Session session;
     private final BackgroundRenderer backgroundRenderer = new BackgroundRenderer();
     private final PlaneRenderer planeRenderer = new PlaneRenderer();
+    private final ObjectRenderer virtualObject = new ObjectRenderer();
+    // Anchors created from taps used for object placing.
+    private final ArrayList<Anchor> anchors = new ArrayList<>();
+    // Temporary matrix allocated here to reduce number of allocations for each frame.
+    private final float[] anchorMatrix = new float[16];
 
     // Permission stuff
     private boolean installRequested;
@@ -46,6 +60,8 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
 
         // 初始化GLSurfaceView，并跟TapHelper绑定
         surfaceView = findViewById(R.id.glSurfaceView);
+        tapHelper = new TapHelper(/*context=*/ this);
+        surfaceView.setOnTouchListener(tapHelper);
 
         // 配置GLSurfaceView基本属性, 并设置renderer.
         surfaceView.setPreserveEGLContextOnPause(true);
@@ -130,8 +146,12 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
             // 主要包括各种OpenGL需要使用的textureId, Texture Coordinates, Shader, Program等
             backgroundRenderer.createOnGlThread(this);
 
-            // 创建用来绘制Plane的Renderer对象
+            // 初始化用来绘制Plane的Renderer对象
             planeRenderer.createOnGlThread(/*context=*/ this, "models/trigrid.png");
+
+            // 初始化用来绘制3D Virtual Object的Renderer对象
+            virtualObject.createOnGlThread(/*context=*/ this, "models/andy.obj", "models/andy.png");
+            virtualObject.setMaterialProperties(0.0f, 2.0f, 0.5f, 6.0f);
         } catch (IOException e) {
             Log.e(TAG, "Failed to read an asset file", e);
         }
@@ -161,13 +181,43 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
 
             // 通过AR Session获取当前手机摄像头(Camera)的当前帧(Frame)。
             Frame frame = session.update();
+            // 通过当前帧Frame对象，可以获取ARCore所捕捉到的Camera对象
+            Camera camera = frame.getCamera();
+
+            // Handle taps. Handling only one tap per frame, as taps are usually low frequency
+            // compared to frame rate.
+            MotionEvent tap = tapHelper.poll();
+            if (tap != null && camera.getTrackingState() == TrackingState.TRACKING) {
+                for (HitResult hit : frame.hitTest(tap)) {
+                    // Check if any plane was hit, and if it was hit inside the plane polygon
+                    Trackable trackable = hit.getTrackable();
+                    // Creates an anchor if a plane or an oriented point was hit.
+                    if ((trackable instanceof Plane
+                            && ((Plane) trackable).isPoseInPolygon(hit.getHitPose())
+                            && (PlaneRenderer.calculateDistanceToPlane(hit.getHitPose(), camera.getPose())
+                            > 0))
+                            || (trackable instanceof Point
+                            && ((Point) trackable).getOrientationMode()
+                            == Point.OrientationMode.ESTIMATED_SURFACE_NORMAL)) {
+                        // Hits are sorted by depth. Consider only closest hit on a plane or oriented point.
+                        // Cap the number of objects created. This avoids overloading both the
+                        // rendering system and ARCore.
+                        if (anchors.size() >= 20) {
+                            anchors.get(0).detach();
+                            anchors.remove(0);
+                        }
+                        // Adding an Anchor tells ARCore that it should track this position in
+                        // space. This anchor is created on the Plane to place the 3D model
+                        // in the correct position relative both to the world and to the plane.
+                        anchors.add(hit.createAnchor());
+                        break;
+                    }
+                }
+            }
 
             // 将当前帧Frame当做背景来draw到SurfaceView上，因此我们能在手机屏幕上看到摄像头中的实时内容
             backgroundRenderer.draw(frame);
 
-            // 绘制ARCore识别出的Planes.
-            // 通过当前帧Frame对象，可以获取ARCore所捕捉到的Camera对象
-            Camera camera = frame.getCamera();
             // 在具体使用Camera对象之前需要先判断当前Camera是否处于Tracking状态
             // 如果不是，则不需要绘制3D Virtual Object
             if (camera.getTrackingState() == TrackingState.PAUSED) {
@@ -180,8 +230,30 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
             // Get camera matrix and draw.
             float[] viewmtx = new float[16];
             camera.getViewMatrix(viewmtx, 0);
+
+            // 绘制ARCore识别出的Planes.
             planeRenderer.drawPlanes(
                     session.getAllTrackables(Plane.class), camera.getDisplayOrientedPose(), projmtx);
+
+            // Compute lighting from average intensity of the image.
+            // The first three components are color scaling factors.
+            // The last one is the average pixel intensity in gamma space.
+            final float[] colorCorrectionRgba = new float[4];
+            frame.getLightEstimate().getColorCorrection(colorCorrectionRgba, 0);
+
+            for (Anchor anchor : anchors) {
+                if (anchor.getTrackingState() != TrackingState.TRACKING) {
+                    continue;
+                }
+
+                // Get the current pose of an Anchor in world space. The Anchor pose is updated
+                // during calls to session.update() as ARCore refines its estimate of the world.
+                anchor.getPose().toMatrix(anchorMatrix, 0);
+
+                // Update and draw the model and its shadow.
+                virtualObject.updateModelMatrix(anchorMatrix, 1.0f);
+                virtualObject.draw(viewmtx, projmtx, colorCorrectionRgba);
+            }
         } catch (Exception e) {
 
         }
