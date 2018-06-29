@@ -71,47 +71,25 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
                         break;
                 }
 
-                // ARCore requires camera permissions to operate. If we did not yet obtain runtime
-                // permission on Android M and above, now is a good time to ask the user for it.
+                // ARCore需要申请并处理Camera的操作，因此必须动态申请Camera相关的权限
                 if (!CameraPermissionHelper.hasCameraPermission(this)) {
                     CameraPermissionHelper.requestCameraPermission(this);
                     return;
                 }
 
-                // Create the session.
+                // 创建session对象，Session是ARCore中真正用来与设备Camera进行打交道的类
+                // 内部实现中进行了Camera的相关读取与计算，之后通过它可以获取Camera的当前帧Frame
                 session = new Session(/* context= */ this);
-
-            } catch (UnavailableArcoreNotInstalledException
-                    | UnavailableUserDeclinedInstallationException e) {
-                message = "Please install ARCore";
-                exception = e;
-            } catch (UnavailableApkTooOldException e) {
-                message = "Please update ARCore";
-                exception = e;
-            } catch (UnavailableSdkTooOldException e) {
-                message = "Please update this app";
-                exception = e;
-            } catch (UnavailableDeviceNotCompatibleException e) {
-                message = "This device does not support AR";
-                exception = e;
             } catch (Exception e) {
-                message = "Failed to create AR session";
-                exception = e;
-            }
-
-            if (message != null) {
-                Log.e(TAG, "Exception creating session", exception);
+                Log.e(TAG, "Failed to create AR session: " + e.getMessage());
                 return;
             }
         }
 
-        // Note that order matters - see the note in onPause(), the reverse applies here.
         try {
             session.resume();
         } catch (CameraNotAvailableException e) {
-            // In some cases (such as another camera app launching) the camera may be given to
-            // a different app instead. Handle this properly by showing a message and recreate the
-            // session at the next iteration.
+            // 有些情况下，手机Camera正在被其它的App所使用。这种情况下可能会报Camera Not Available异常
             session = null;
             return;
         }
@@ -136,9 +114,8 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
     public void onPause() {
         super.onPause();
         if (session != null) {
-            // Note that the order matters - GLSurfaceView is paused first so that it does not try
-            // to query the session. If Session is paused before GLSurfaceView, GLSurfaceView may
-            // still call session.update() and get a SessionPausedException.
+            // 注意：顺序不能改变！必须先暂停GLSurfaceView, 否则GLSurfaceView会继续调用Session的update方法。
+            // 但是Session已经pause状态，所以会报SessionPausedException异常
             surfaceView.onPause();
             session.pause();
         }
@@ -150,7 +127,7 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
 
         try {
             // 初始化用来画背景以及Virtual Object的OpenGL设置
-            // 主要包括各种OpenGL需要使用的Shader，Program等
+            // 主要包括各种OpenGL需要使用的textureId, Texture Coordinates, Shader, Program等
             backgroundRenderer.createOnGlThread(this);
         } catch (IOException e) {
             Log.e(TAG, "Failed to read an asset file", e);
