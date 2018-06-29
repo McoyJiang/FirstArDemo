@@ -9,16 +9,15 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.example.dannyjiang.myfirstar.rendering.BackgroundRenderer;
+import com.example.dannyjiang.myfirstar.rendering.PlaneRenderer;
 import com.example.dannyjiang.myfirstar.utils.CameraPermissionHelper;
 import com.google.ar.core.ArCoreApk;
+import com.google.ar.core.Camera;
 import com.google.ar.core.Frame;
+import com.google.ar.core.Plane;
 import com.google.ar.core.Session;
+import com.google.ar.core.TrackingState;
 import com.google.ar.core.exceptions.CameraNotAvailableException;
-import com.google.ar.core.exceptions.UnavailableApkTooOldException;
-import com.google.ar.core.exceptions.UnavailableArcoreNotInstalledException;
-import com.google.ar.core.exceptions.UnavailableDeviceNotCompatibleException;
-import com.google.ar.core.exceptions.UnavailableSdkTooOldException;
-import com.google.ar.core.exceptions.UnavailableUserDeclinedInstallationException;
 
 import java.io.IOException;
 
@@ -35,6 +34,7 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
     // AR world
     private Session session;
     private final BackgroundRenderer backgroundRenderer = new BackgroundRenderer();
+    private final PlaneRenderer planeRenderer = new PlaneRenderer();
 
     // Permission stuff
     private boolean installRequested;
@@ -129,6 +129,9 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
             // 初始化用来画背景以及Virtual Object的OpenGL设置
             // 主要包括各种OpenGL需要使用的textureId, Texture Coordinates, Shader, Program等
             backgroundRenderer.createOnGlThread(this);
+
+            // 创建用来绘制Plane的Renderer对象
+            planeRenderer.createOnGlThread(/*context=*/ this, "models/trigrid.png");
         } catch (IOException e) {
             Log.e(TAG, "Failed to read an asset file", e);
         }
@@ -161,6 +164,24 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
 
             // 将当前帧Frame当做背景来draw到SurfaceView上，因此我们能在手机屏幕上看到摄像头中的实时内容
             backgroundRenderer.draw(frame);
+
+            // 绘制ARCore识别出的Planes.
+            // 通过当前帧Frame对象，可以获取ARCore所捕捉到的Camera对象
+            Camera camera = frame.getCamera();
+            // 在具体使用Camera对象之前需要先判断当前Camera是否处于Tracking状态
+            // 如果不是，则不需要绘制3D Virtual Object
+            if (camera.getTrackingState() == TrackingState.PAUSED) {
+                return;
+            }
+            // Get projection matrix.
+            float[] projmtx = new float[16];
+            camera.getProjectionMatrix(projmtx, 0, 0.1f, 100.0f);
+
+            // Get camera matrix and draw.
+            float[] viewmtx = new float[16];
+            camera.getViewMatrix(viewmtx, 0);
+            planeRenderer.drawPlanes(
+                    session.getAllTrackables(Plane.class), camera.getDisplayOrientedPose(), projmtx);
         } catch (Exception e) {
 
         }
