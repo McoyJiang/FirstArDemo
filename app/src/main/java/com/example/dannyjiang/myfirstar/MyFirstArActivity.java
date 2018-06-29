@@ -40,10 +40,16 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
     private GLSurfaceView surfaceView;
     private TapHelper tapHelper;
 
-    // AR world
+    /*
+     * AR world
+      */
+    // ARCore中的核心类，用来处理与设备Camera的一系列交互
     private Session session;
+    // 用来绘制背景的Renderer封装类
     private final BackgroundRenderer backgroundRenderer = new BackgroundRenderer();
+    // 用来绘制AR Plane的Renderer封装类
     private final PlaneRenderer planeRenderer = new PlaneRenderer();
+    // 用来绘制Virtual Object的Renderer封装类
     private final ObjectRenderer virtualObject = new ObjectRenderer();
     // Anchors created from taps used for object placing.
     private final ArrayList<Anchor> anchors = new ArrayList<>();
@@ -184,21 +190,20 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
             // 通过当前帧Frame对象，可以获取ARCore所捕捉到的Camera对象
             Camera camera = frame.getCamera();
 
-            // Handle taps. Handling only one tap per frame, as taps are usually low frequency
-            // compared to frame rate.
+            // 使用TapHelper从队列中获取一次点击事件
             MotionEvent tap = tapHelper.poll();
             if (tap != null && camera.getTrackingState() == TrackingState.TRACKING) {
                 for (HitResult hit : frame.hitTest(tap)) {
                     // Check if any plane was hit, and if it was hit inside the plane polygon
-                    Trackable trackable = hit.getTrackable();
+//                    Trackable trackable = hit.getTrackable();
                     // Creates an anchor if a plane or an oriented point was hit.
-                    if ((trackable instanceof Plane
-                            && ((Plane) trackable).isPoseInPolygon(hit.getHitPose())
-                            && (PlaneRenderer.calculateDistanceToPlane(hit.getHitPose(), camera.getPose())
-                            > 0))
-                            || (trackable instanceof Point
-                            && ((Point) trackable).getOrientationMode()
-                            == Point.OrientationMode.ESTIMATED_SURFACE_NORMAL)) {
+//                    if ((trackable instanceof Plane
+//                            && ((Plane) trackable).isPoseInPolygon(hit.getHitPose())
+//                            && (PlaneRenderer.calculateDistanceToPlane(hit.getHitPose(), camera.getPose())
+//                            > 0))
+//                            || (trackable instanceof Point
+//                            && ((Point) trackable).getOrientationMode()
+//                            == Point.OrientationMode.ESTIMATED_SURFACE_NORMAL)) {
                         // Hits are sorted by depth. Consider only closest hit on a plane or oriented point.
                         // Cap the number of objects created. This avoids overloading both the
                         // rendering system and ARCore.
@@ -211,7 +216,7 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
                         // in the correct position relative both to the world and to the plane.
                         anchors.add(hit.createAnchor());
                         break;
-                    }
+//                    }
                 }
             }
 
@@ -232,8 +237,8 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
             camera.getViewMatrix(viewmtx, 0);
 
             // 绘制ARCore识别出的Planes.
-            planeRenderer.drawPlanes(
-                    session.getAllTrackables(Plane.class), camera.getDisplayOrientedPose(), projmtx);
+//            planeRenderer.drawPlanes(
+//                    session.getAllTrackables(Plane.class), camera.getDisplayOrientedPose(), projmtx);
 
             // Compute lighting from average intensity of the image.
             // The first three components are color scaling factors.

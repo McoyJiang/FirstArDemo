@@ -4,18 +4,13 @@
     <list default="true" id="f98c75d7-d51d-425d-943d-9e4965d8d09c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/MyFirstArActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/MyFirstArActivity.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,10 +37,70 @@
       <file leaf-file-name="MyFirstArActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/MyFirstArActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="192" column="61" lean-forward="false" selection-start-line="192" selection-start-column="61" selection-end-line="192" selection-end-column="61" />
+            <state relative-caret-position="877">
+              <caret line="239" column="39" lean-forward="false" selection-start-line="239" selection-start-column="39" selection-end-line="240" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HitResult.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/ab578e0a0d31fb5a30607f22ff816976/jars/classes.jar!/com/google/ar/core/HitResult.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="55" column="18" lean-forward="false" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+              <folding>
+                <marker date="1526969108000" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1526969108000" expanded="true" signature="258:328" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="356:424" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="465:698" ph="{...}" />
+                <marker date="1526969108000" expanded="false" signature="725:736" ph=" { " />
+                <marker date="1526969108000" expanded="false" signature="786:792" ph=" }" />
+                <marker date="1526969108000" expanded="true" signature="841:979" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="1010:1098" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="1131:1223" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="1261:1414" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="1449:1594" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Session.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/ab578e0a0d31fb5a30607f22ff816976/jars/classes.jar!/com/google/ar/core/Session.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="154" column="47" lean-forward="false" selection-start-line="154" selection-start-column="47" selection-end-line="154" selection-end-column="47" />
+              <folding>
+                <marker date="1526969108000" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1526969108000" expanded="false" signature="142:1819" ph="..." />
+                <marker date="1526969108000" expanded="true" signature="4090:4299" ph="{...}" />
+                <marker date="1526969108000" expanded="false" signature="4323:4334" ph=" { " />
+                <marker date="1526969108000" expanded="false" signature="4359:4365" ph=" }" />
+                <marker date="1526969108000" expanded="true" signature="4391:4459" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="4508:4644" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="4687:5115" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="5156:5231" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="5293:5346" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="5409:5641" ph="{...}" />
+                <marker date="1526969108000" expanded="false" signature="5666:5677" ph=" { " />
+                <marker date="1526969108000" expanded="false" signature="5713:5719" ph=" }" />
+                <marker date="1526969108000" expanded="true" signature="5768:5841" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="5908:5991" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="5997:6015" ph="/**...*/" />
+                <marker date="1526969108000" expanded="true" signature="6076:6160" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="6208:6318" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="6399:6722" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="6766:6882" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="6931:7063" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="7115:7237" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="7308:7622" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="7728:8155" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="8221:8538" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="8712:12150" ph="{...}" />
+                <marker date="1526969108000" expanded="true" signature="12207:12350" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -2823,14 +2878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/ab578e0a0d31fb5a30607f22ff816976/jars/classes.jar!/com/google/ar/core/Session.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="154" column="47" lean-forward="false" selection-start-line="154" selection-start-column="47" selection-end-line="154" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/rendering/PlaneRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
@@ -2857,10 +2904,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/ab578e0a0d31fb5a30607f22ff816976/jars/classes.jar!/com/google/ar/core/Session.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="154" column="47" lean-forward="false" selection-start-line="154" selection-start-column="47" selection-end-line="154" selection-end-column="47" />
+          <folding>
+            <marker date="1526969108000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1526969108000" expanded="false" signature="142:1819" ph="..." />
+            <marker date="1526969108000" expanded="true" signature="4090:4299" ph="{...}" />
+            <marker date="1526969108000" expanded="false" signature="4323:4334" ph=" { " />
+            <marker date="1526969108000" expanded="false" signature="4359:4365" ph=" }" />
+            <marker date="1526969108000" expanded="true" signature="4391:4459" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="4508:4644" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="4687:5115" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="5156:5231" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="5293:5346" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="5409:5641" ph="{...}" />
+            <marker date="1526969108000" expanded="false" signature="5666:5677" ph=" { " />
+            <marker date="1526969108000" expanded="false" signature="5713:5719" ph=" }" />
+            <marker date="1526969108000" expanded="true" signature="5768:5841" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="5908:5991" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="5997:6015" ph="/**...*/" />
+            <marker date="1526969108000" expanded="true" signature="6076:6160" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="6208:6318" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="6399:6722" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="6766:6882" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="6931:7063" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="7115:7237" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="7308:7622" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="7728:8155" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="8221:8538" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="8712:12150" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="12207:12350" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.0.aar/ab578e0a0d31fb5a30607f22ff816976/jars/classes.jar!/com/google/ar/core/HitResult.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="55" column="18" lean-forward="false" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+          <folding>
+            <marker date="1526969108000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1526969108000" expanded="true" signature="258:328" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="356:424" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="465:698" ph="{...}" />
+            <marker date="1526969108000" expanded="false" signature="725:736" ph=" { " />
+            <marker date="1526969108000" expanded="false" signature="786:792" ph=" }" />
+            <marker date="1526969108000" expanded="true" signature="841:979" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="1010:1098" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="1131:1223" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="1261:1414" ph="{...}" />
+            <marker date="1526969108000" expanded="true" signature="1449:1594" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dannyjiang/myfirstar/MyFirstArActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="192" column="61" lean-forward="false" selection-start-line="192" selection-start-column="61" selection-end-line="192" selection-end-column="61" />
+        <state relative-caret-position="877">
+          <caret line="239" column="39" lean-forward="false" selection-start-line="239" selection-start-column="39" selection-end-line="240" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
