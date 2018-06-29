@@ -248,17 +248,21 @@ public class MyFirstArActivity extends AppCompatActivity implements GLSurfaceVie
             final float[] colorCorrectionRgba = new float[4];
             frame.getLightEstimate().getColorCorrection(colorCorrectionRgba, 0);
 
+            /*
+             * 遍历Anchor集合，并根据集合所对应的Matrix
+             * 将所有的Virtual Object绘制到GLSurfaceView中
+             */
             for (Anchor anchor : anchors) {
                 if (anchor.getTrackingState() != TrackingState.TRACKING) {
                     continue;
                 }
 
-                // Get the current pose of an Anchor in world space. The Anchor pose is updated
-                // during calls to session.update() as ARCore refines its estimate of the world.
+                // 将Anchor所对应的Matrix(可以理解为位置Position)填充到anchorMatrix数组中
                 anchor.getPose().toMatrix(anchorMatrix, 0);
 
-                // Update and draw the model and its shadow.
+                // 根据已经填充的Matrix更新Virtual Object的ModelMatrix
                 virtualObject.updateModelMatrix(anchorMatrix, 1.0f);
+                // 绘制Virtual Object
                 virtualObject.draw(viewmtx, projmtx, colorCorrectionRgba);
             }
         } catch (Exception e) {
